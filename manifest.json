@@ -1,0 +1,22 @@
+{
+	"manifest_version": 3,
+	"name": "VRChat RejoinTool WebEx",
+	"version": "0.1.0",
+	"description": "This software helps rejoin to the VRChat instance.",
+	"icons": {
+		"48": "res/icon48.png",
+		"128": "res/icon128.png",
+		"256": "res/icon256.png"
+	},
+	"browser_action": {
+		"default_title": "VRChat RejoinTool WebEX",
+		"default_popup": "popup/ui.html"
+	},
+	"permissions": [
+		"https://vrchat.com/",
+		"cookies"
+	],
+	"background": {
+		"scripts": ["background/connection.js"]
+	}
+}
