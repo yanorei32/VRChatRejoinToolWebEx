@@ -15,7 +15,7 @@
 	"permissions": [
 		"cookies"
 	],
-	"host_permission": [
+	"host_permissions": [
 		"https://vrchat.com/"
 	],
 	"background": {
