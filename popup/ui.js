@@ -16,9 +16,9 @@ const parseStore = store => {
 	const visit = {};
 
 	visit.datetime = new Date(store.datetime).toISOString().slice(0, -5).replace('T', ' ').replaceAll('-', '/');
-	visit.detailLink = `https://vrchat.com/home/launch?worldId=${resp.world.id}&instanceId=${resp.instance}`;
-	visit.launchLink = `vrchat://launch?id=${resp.location}`;
-	visit.invitemeLink = `https://vrchat.com/api/1/instances/${resp.location}/invite?apiKey=JlE5Jldo5Jibnk5O5hTx6XVqsJu4WJ26`;
+	visit.detailLink = `https://vrchat.com/home/launch?worldId=${resp.travelingToLocation.split(":")[0]}&instanceId=${resp.travelingToLocation.split(":")[1]}`;
+	visit.launchLink = `vrchat://launch?id=${resp.travelingToLocation}`;
+	visit.invitemeLink = `https://vrchat.com/api/1/instances/${resp.travelingToLocation}/invite?apiKey=JlE5Jldo5Jibnk5O5hTx6XVqsJu4WJ26`;
 	visit.permission = 'Public';
 	visit.userLink = null;
 	visit.region = 'USW';
